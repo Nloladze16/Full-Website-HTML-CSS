@@ -1,0 +1,750 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.active {
+  color: gray;
+}
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+}
+header .HeaderLeft {
+  width: 25%;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px;
+}
+header .HeaderLeft .Title {
+  width: 120px;
+  height: 90px;
+  border: solid 1px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+header .HeaderLeft .Title a {
+  font-family: raleway;
+  text-align: center;
+  font-weight: 200;
+  font-size: 25px;
+}
+header .HeaderRight {
+  width: 75%;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .HeaderRight .HeaderRightList {
+  height: 125px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  padding-left: 10%;
+  padding-right: 20px;
+}
+header .HeaderRight .HeaderRightList a {
+  font-size: 20px;
+  font-style: italic;
+  transition: 0.5s;
+}
+header .HeaderRight .HeaderRightList a:hover {
+  color: gray;
+}
+header .HeaderRight #check {
+  display: none;
+}
+header .HeaderRight .Burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 990;
+  right: 30px;
+  top: 55px;
+  transition: 1s;
+}
+header .HeaderRight .Burger .LineB {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+header .HeaderRight .Burger .LineB .Line3 {
+  transition: 0.5s;
+}
+header .HeaderRight .HeaderRightList2 {
+  display: none;
+  background-color: #ffffff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .HeaderRight .HeaderRightList2 ul {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding-left: 30px;
+  padding-bottom: 110px;
+  font-style: italic;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    position: relative;
+  }
+  header .HeaderLeft {
+    width: 75%;
+    padding-left: 40px;
+    justify-content: start;
+  }
+  header .HeaderLeft .Title {
+    width: 80px;
+    height: 60px;
+  }
+  header .HeaderLeft .Title a {
+    font-size: 16px;
+  }
+  header .HeaderRight {
+    width: 25%;
+    padding-right: 30px;
+  }
+  header .HeaderRight .HeaderRightList {
+    display: none;
+  }
+  header .HeaderRight .Burger {
+    position: absolute;
+    display: flex;
+  }
+  header .HeaderRight .HeaderRightList2 {
+    display: none;
+    width: 90%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+  header .HeaderRight #check {
+    display: none;
+  }
+  header .HeaderRight #check:checked ~ .HeaderRightList2 {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .HeaderRight #check:checked ~ label .Burger .LineB {
+    transform: rotate(45deg) translate(5px);
+    transition: 0.5s;
+  }
+  header .HeaderRight #check:checked ~ label .Burger .Line2 {
+    transform: rotate(-45deg) translate(5px);
+    transition: 0.5s;
+  }
+  header .HeaderRight #check:checked ~ label .Burger .Line3 {
+    display: none;
+    transition: 0.5s;
+  }
+}
+.FirstSection {
+  margin-top: 125px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FirstSection img {
+  width: 1100px;
+}
+
+@media screen and (max-width: 1200px) {
+  .FirstSection img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .FirstSection {
+    margin-top: 0;
+  }
+}
+main {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main #FeaturedProjects {
+  padding: 15px 0px 15px 5px;
+  width: 860px;
+  display: flex;
+  font-size: 25px;
+  font-family: raleway;
+  font-weight: 200;
+}
+main #ViewAllProjects {
+  padding: 50px 0px 100px 5px;
+  width: 860px;
+  display: flex;
+  font-size: 16px;
+  text-decoration: underline;
+  font-family: josefin sans;
+  font-weight: 200;
+}
+main .MainParent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+main .MainParent .MainChild {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0px;
+  padding: 40px 20px;
+}
+main .MainParent .MainChild .GrandChild {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+main .MainParent .MainChild .FirstChild {
+  width: 300px;
+  height: 300px;
+  font-size: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+main .MainParent .MainChild .FirstChild a {
+  font-style: italic;
+}
+main .MainParent .MainChild .FirstChild a :nth-child(1) {
+  padding-left: 10px;
+}
+main .MainParent .MainChild .FirstChild a :nth-child(2) {
+  padding-left: 15px;
+}
+main .MainParent .MainChild .FirstChild a :nth-child(3) {
+  padding-left: 20px;
+}
+main .MainParent .MainChild .SecondChild {
+  padding: 0 36px 0 0;
+  justify-content: start;
+  align-items: start;
+  height: 300px;
+  width: 300px;
+  font-family: josefin sans;
+  font-weight: 200;
+}
+main .MainParent .MainChild .SecondFirstChild {
+  padding-left: 20px;
+}
+main .MainParent .MainChild .ThirdChild {
+  height: 300px;
+  width: 300px;
+}
+main .MainParent .MainChild .ThirdChild:hover {
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+main .MainParent .MainChild .FirstImage {
+  background-image: url(./Images/f61af8_6cd59919d81c4204becc803d5170f5d9~mv2.avif);
+  background-size: cover;
+  background-position: center;
+}
+main .MainParent .MainChild .SecondImage {
+  background-image: url(./Images/f61af8_f07e609311d64e6fa72d486fbe0a699f~mv2.avif);
+  background-size: cover;
+  background-position: center;
+}
+main .MainParent .MainChild .ThirdImage {
+  background-image: url(./Images/f61af8_4ae6a3438ee640f1af497b78aacc9402~mv2.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 999.5px) {
+  main #FeaturedProjects {
+    width: 480px;
+  }
+  main #ViewAllProjects {
+    width: 480px;
+  }
+  main .MainParent {
+    gap: 20px;
+  }
+  main .MainParent .MainChild {
+    gap: 30px;
+    padding: 40px 20px;
+  }
+  main .MainParent .MainChild .FirstChild {
+    order: -2;
+    width: 300px;
+    height: 200px;
+    font-size: 50px;
+    padding-left: 60px;
+  }
+  main .MainParent .MainChild .SecondChild {
+    order: -1;
+    height: 200px;
+    width: 300px;
+  }
+  main .MainParent .MainChild .SecondFirstChild {
+    padding-left: 60px;
+  }
+  main .MainParent .MainChild .SecondSecondChild {
+    height: 200px;
+  }
+  main .MainParent .MainChild .ThirdChild {
+    order: 1;
+    height: 300px;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 700px) {
+  main .MainParent .MainChild {
+    gap: 0px;
+    padding: 40px 20px;
+  }
+  main .MainParent .MainChild .FirstChild {
+    order: -2;
+    width: 300px;
+    height: 200px;
+    font-size: 50px;
+    padding-left: 60px;
+  }
+  main .MainParent .MainChild .SecondChild {
+    order: -1;
+    height: 200px;
+    width: 300px;
+  }
+  main .MainParent .MainChild .SecondSecondChild {
+    height: 200px;
+  }
+  main .MainParent .MainChild .ThirdChild {
+    order: 1;
+    height: 300px;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 639.5px) {
+  main #FeaturedProjects {
+    width: 300px;
+    font-size: 20px;
+  }
+  main #ViewAllProjects {
+    width: 300px;
+    font-size: 16px;
+  }
+  main .MainParent {
+    gap: 30px;
+  }
+  main .MainParent .MainChild1 {
+    order: -3;
+  }
+  main .MainParent .MainChild3 {
+    order: -1;
+  }
+  main .MainParent .MainChild2 {
+    order: 3;
+  }
+  main .MainParent .MainChild {
+    padding: 0px 20px;
+  }
+  main .MainParent .MainChild .SecondChild {
+    height: auto;
+    padding-bottom: 10px;
+    padding-right: 0;
+  }
+  main .MainParent .MainChild .FirstChild {
+    height: auto;
+    padding-left: 0px;
+    margin-bottom: 5px;
+  }
+  main .MainParent .MainChild .FirstChild a {
+    font-size: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  main .MainParent .MainChild .FirstChild a :nth-child(1) {
+    padding-left: 0;
+  }
+  main .MainParent .MainChild .FirstChild a :nth-child(2) {
+    padding-left: 0;
+  }
+  main .MainParent .MainChild .FirstChild a :nth-child(3) {
+    padding-left: 0;
+  }
+  main .MainParent .MainChild .FirstFirstChild a {
+    flex-direction: row;
+  }
+  main .MainParent .MainChild .FirstFirstChild a :nth-child(1) {
+    width: 100%;
+    padding-left: 0;
+  }
+  main .MainParent .MainChild .FirstFirstChild a :nth-child(2) {
+    padding-left: 0;
+  }
+  main .MainParent .MainChild .FirstFirstChild a :nth-child(3) {
+    padding-left: 0;
+  }
+}
+.SecondSection {
+  height: 100vh;
+  width: 100%;
+  background-image: url(./Images/f61af8_2658b84de2e74e7cba2c3483652ded29~mv2_d_4627_3085_s_4_2.avif);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 900px) {
+  .SecondSection {
+    height: 90vh;
+    width: 100%;
+    background-attachment: scroll;
+  }
+}
+@media screen and (max-width: 800px) {
+  .SecondSection {
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 700px) {
+  .SecondSection {
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  .SecondSection {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .SecondSection {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .SecondSection {
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 300px) {
+  .SecondSection {
+    height: 30vh;
+  }
+}
+.NewsSection {
+  width: 100%;
+  display: flex;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+}
+.NewsSection .NewsSectionChild {
+  height: 800px;
+  width: 980px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-left: 20px;
+}
+.NewsSection .NewsSectionChild .NewsChild {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.NewsSection .NewsSectionChild .NewsChild :nth-child(1) {
+  font-size: 60px;
+}
+.NewsSection .NewsSectionChild .NewsChild :nth-child(2) {
+  font-size: 18px;
+  word-spacing: 15px;
+}
+.NewsSection .NewsSectionChild .NewsChild :nth-child(3) {
+  font-size: 26px;
+  line-height: 1.6;
+}
+.NewsSection .NewsSectionChild .NewsChild :nth-child(4) {
+  font-family: josefin sans;
+  font-weight: 200;
+  text-decoration: underline;
+}
+.NewsSection .NewsSectionChild .NewsChild1 {
+  padding-bottom: 0px;
+}
+.NewsSection .NewsSectionChild .NewsChild1 :nth-child(1) {
+  font-size: 60px;
+}
+.NewsSection .NewsSectionChild .NewsChild1 :nth-child(2) {
+  font-size: 18px;
+  word-spacing: 15px;
+}
+.NewsSection .NewsSectionChild .NewsChild1 :nth-child(3) {
+  font-size: 26px;
+  line-height: 1.6;
+}
+.NewsSection .NewsSectionChild .NewsChild1 :nth-child(4) {
+  text-decoration: underline;
+}
+.NewsSection .NewsSectionChild .NewsChild1 :nth-child(3) {
+  width: 210px;
+}
+.NewsSection .NewsSectionChild .NewsChild1 :nth-child(4) {
+  padding-top: 140px;
+}
+.NewsSection .NewsSectionChild .NewsChild2 :nth-child(3) {
+  width: 210px;
+}
+.NewsSection .NewsSectionChild .NewsChild2 :nth-child(4) {
+  padding-top: 57px;
+}
+.NewsSection .NewsSectionChild .NewsChild3 {
+  padding-bottom: 0px;
+}
+.NewsSection .NewsSectionChild .NewsChild3 :nth-child(3) {
+  width: 210px;
+}
+.NewsSection .NewsSectionChild .NewsChild3 :nth-child(4) {
+  padding-top: 183px;
+}
+
+@media screen and (max-width: 800px) {
+  .NewsSection .NewsSectionChild {
+    height: 800px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-left: 32%;
+  }
+  .NewsSection .NewsSectionChild .NewsChild {
+    gap: 10px;
+  }
+  .NewsSection .NewsSectionChild .NewsChild :nth-child(1) {
+    font-size: 42px;
+  }
+  .NewsSection .NewsSectionChild .NewsChild :nth-child(2) {
+    font-size: 20px;
+    word-spacing: 15px;
+  }
+  .NewsSection .NewsSectionChild .NewsChild :nth-child(3) {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+  .NewsSection .NewsSectionChild .NewsChild :nth-child(4) {
+    padding-top: 10px;
+    font-size: 18px;
+  }
+  .NewsSection .NewsSectionChild .NewsChild1 :nth-child(3) {
+    width: 260px;
+  }
+  .NewsSection .NewsSectionChild .NewsChild1 :nth-child(4) {
+    padding-top: 10px;
+  }
+  .NewsSection .NewsSectionChild .NewsChild2 :nth-child(3) {
+    width: 280px;
+  }
+  .NewsSection .NewsSectionChild .NewsChild3 :nth-child(3) {
+    width: 290px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .NewsSection .NewsSectionChild {
+    padding-left: 30%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .NewsSection .NewsSectionChild {
+    padding-left: 15px;
+  }
+}
+footer {
+  width: 100%;
+  background-color: #2f2e2e;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 260px;
+}
+footer .FooterLeft {
+  width: 30%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+footer .FooterLeft .FooterLeftChild {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+footer .FooterLeft .FooterLeftChild p {
+  font-family: bodoni moda;
+  font-weight: 300;
+  color: white;
+  width: 120px;
+  font-size: 50px;
+  font-style: italic;
+  line-height: 1;
+}
+footer .FooterMiddle {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+footer .FooterMiddle .FooterMidleChild {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .FooterMiddle p {
+  font-family: josefin sans;
+  font-weight: 200;
+  width: 350px;
+  color: white;
+  font-size: 16px;
+}
+footer .FooterRight {
+  width: 30%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  padding-top: 105px;
+  padding-left: 10px;
+}
+footer .FooterRight i {
+  color: white;
+}
+footer .arrowup {
+  display: none;
+}
+footer .arrowup i {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+  footer .FooterLeft {
+    width: 100%;
+    justify-content: center;
+    order: -3;
+  }
+  footer .FooterLeft .FooterLeftChild {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  footer .FooterMiddle {
+    order: 1;
+    padding-top: 30px;
+    padding-left: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+  footer .FooterMiddle .FooterMidleChild {
+    gap: 10px;
+    line-height: 1.8;
+  }
+  footer .FooterMiddle .FooterMidleChild p {
+    font-size: 18px;
+  }
+  footer .FooterMiddle .FooterMidleChild :nth-child(1) {
+    width: 300px;
+  }
+  footer .FooterMiddle .FooterMidleChild :nth-child(2) {
+    width: 280px;
+  }
+  footer .FooterMiddle .FooterMidleChild :nth-child(3) {
+    width: 255px;
+  }
+  footer .FooterRight {
+    order: -1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 0px;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  footer .arrowup {
+    position: fixed;
+    right: 15px;
+    bottom: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .arrowup i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #202a32;
+    font-size: 30px;
+    color: white;
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: 450px) {
+  footer .FooterLeft {
+    justify-content: start;
+    padding-left: 20px;
+  }
+  footer .FooterMiddle {
+    justify-content: start;
+    padding-left: 20px;
+  }
+  footer .FooterRight {
+    justify-content: start;
+    padding-left: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
