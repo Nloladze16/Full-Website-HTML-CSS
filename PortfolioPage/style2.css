@@ -13,4 +13,43 @@ html {
 
 .active {
   color: gray;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .title {
+  width: 940px;
+}
+main .title p {
+  font-size: 60px;
+  width: 300px;
+}
+main .parent {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+main .parent .child {
+  width: 300px;
+  height: 380px;
+  background-color: yellowgreen;
+}
+
+@media screen and (max-width: 1000px) {
+  main .title {
+    width: 620px;
+  }
+  main .title p {
+    font-size: 50px;
+  }
+  main .parent {
+    width: 650px;
+  }
 }/*# sourceMappingURL=style2.css.map */
