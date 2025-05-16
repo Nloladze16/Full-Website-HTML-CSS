@@ -128,8 +128,6 @@ header {
   }
 }
 @media screen and (max-width: 700px) {
-
-
   header {
     position: relative;
     .HeaderLeft {
@@ -207,9 +205,12 @@ main {
   flex-direction: column;
   .title {
     width: 940px;
+    padding: 100px 0px;
     p {
-      font-size: 60px;
-      width: 300px;
+      font-size: 80px;
+      width: 400px;
+      font-style: italic;
+      font-weight: 100;
     }
   }
 
@@ -223,10 +224,22 @@ main {
     .child {
       width: 300px;
       height: 400px;
-      background-color: yellowgreen;
       display: flex;
       flex-direction: column;
       align-items: center;
+      transition: 0.3s;
+      &:hover {
+        filter: opacity(60%) grayscale(100%);
+      }
+
+      p {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+      }
       .img {
         width: 100%;
         height: 300px;
@@ -266,15 +279,41 @@ main {
   main {
     .title {
       width: 620px;
+      padding: 20px 0;
       p {
         font-size: 50px;
       }
     }
     .parent {
       width: 650px;
+      .child{
+        height: 380px;
+      }
     }
   }
 }
+@media screen and (max-width: 700px) {
+  main {
+    .title {
+      width: 300px;
+      p {
+        width: 250px;
+        font-size: 30px;
+      }
+    }
+    .parent {
+      width: 320px;
+      padding: 20px 0px;
+      .child{
+        height: 300px;
+        p{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 
 footer {
   width: 100%;
@@ -397,10 +436,10 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
- main{
-  margin-top: 0px;
-}
- 
+  main {
+    margin-top: 0px;
+  }
+
   footer {
     .arrowup {
       position: fixed;
