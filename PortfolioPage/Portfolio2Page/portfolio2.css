@@ -9,6 +9,7 @@
 
 body {
   font-family: none;
+  scroll-behavior: smooth;
   line-height: 1.2;
 }
 
@@ -20,164 +21,6 @@ p {
   margin-bottom: 0;
 }
 
-header {
-  width: 100% !important;
-  background-color: #ffffff !important;
-  display: flex !important;
-  position: fixed !important;
-  z-index: 200 !important;
-  top: 0 !important;
-}
-header .HeaderLeft {
-  width: 25%;
-  height: 125px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 30px;
-}
-header .HeaderLeft .Title {
-  width: 120px;
-  height: 90px;
-  border: solid 1px black !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 5px;
-}
-header .HeaderLeft .Title a {
-  font-family: raleway !important;
-  text-align: center;
-  font-weight: 200;
-  font-size: 25px;
-}
-header .HeaderRight {
-  width: 75%;
-  height: 125px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header .HeaderRight .HeaderRightList {
-  height: 125px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10%;
-  padding-left: 10%;
-  padding-right: 20px;
-}
-header .HeaderRight .HeaderRightList a {
-  font-size: 20px;
-  font-style: italic;
-  transition: 0.5s;
-}
-header .HeaderRight .HeaderRightList a:hover {
-  color: gray;
-}
-header .HeaderRight #check {
-  display: none;
-}
-header .HeaderRight .Burger {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  cursor: pointer;
-  position: fixed;
-  z-index: 990;
-  right: 30px;
-  top: 55px;
-  transition: 1s;
-}
-header .HeaderRight .Burger .LineB {
-  width: 30px;
-  height: 3px;
-  background-color: black;
-  border-radius: 5px;
-  transition: 0.5s;
-}
-header .HeaderRight .Burger .LineB .Line3 {
-  transition: 0.5s;
-}
-header .HeaderRight .HeaderRightList2 {
-  display: none;
-  background-color: #ffffff !important;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-header .HeaderRight .HeaderRightList2 ul {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 40px;
-  padding-left: 30px;
-  padding-bottom: 110px;
-  font-style: italic;
-  overflow: scroll;
-}
-
-@media screen and (max-width: 700px) {
-  header {
-    position: relative;
-  }
-  header .HeaderLeft {
-    width: 75%;
-    padding-left: 40px;
-    justify-content: start;
-  }
-  header .HeaderLeft .Title {
-    width: 80px;
-    height: 60px;
-  }
-  header .HeaderLeft .Title a {
-    font-size: 16px;
-  }
-  header .HeaderRight {
-    width: 25%;
-    padding-right: 30px;
-  }
-  header .HeaderRight .HeaderRightList {
-    display: none;
-  }
-  header .HeaderRight .Burger {
-    position: absolute;
-    display: flex;
-  }
-  header .HeaderRight .HeaderRightList2 {
-    display: none;
-    width: 90%;
-    height: 100vh;
-    position: fixed;
-    right: 0;
-    top: 0;
-  }
-  header .HeaderRight #check {
-    display: none;
-  }
-  header .HeaderRight #check:checked ~ .HeaderRightList2 {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  header .HeaderRight #check:checked ~ label .Burger .LineB {
-    transform: rotate(45deg) translate(5px);
-    transition: 0.5s;
-  }
-  header .HeaderRight #check:checked ~ label .Burger .Line2 {
-    transform: rotate(-45deg) translate(5px);
-    transition: 0.5s;
-  }
-  header .HeaderRight #check:checked ~ label .Burger .Line3 {
-    display: none;
-    transition: 0.5s;
-  }
-}
 footer {
   width: 100%;
   background-color: #2f2e2e;
@@ -308,7 +151,7 @@ footer .arrowup i {
     height: 50px;
     background-color: #202a32;
     font-size: 30px;
-    color: white;
+    color: white !important;
     border-radius: 50%;
   }
 }
@@ -332,6 +175,9 @@ main {
   align-items: center;
   justify-content: center;
   margin-top: 130px;
+}
+main .afterCarousel {
+  display: none;
 }
 main .top {
   width: 860px;
@@ -394,5 +240,213 @@ main .nextp {
   }
   main .nextp {
     width: 700px;
+  }
+}
+@media screen and (max-width: 800px) {
+  main .mycarousel {
+    display: none;
+    width: 700px;
+  }
+  main .mycarousel img {
+    height: 380px !important;
+  }
+  main .afterCarousel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  main .afterCarousel img {
+    width: 90%;
+  }
+  main .top {
+    width: 90%;
+    padding: 0 0px;
+  }
+  main .top .bp {
+    font-size: 40px;
+    width: 200px;
+  }
+  main .top .Middle1 {
+    width: 90%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  main .top .Middle2 {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  main .top .Middle2 .P4 {
+    width: 100%;
+  }
+  main .top .Middle2 .P5 {
+    width: 100%;
+  }
+  main .nextp {
+    width: 100%;
+    padding-right: 40px;
+  }
+}
+header {
+  width: 100% !important;
+  background-color: #ffffff !important;
+  display: flex;
+  position: fixed;
+  z-index: 200 !important;
+  top: 0 !important;
+}
+header .HeaderLeft {
+  width: 25%;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px;
+}
+header .HeaderLeft .Title {
+  width: 120px;
+  height: 90px;
+  border: solid 1px black !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+header .HeaderLeft .Title a {
+  font-family: raleway !important;
+  text-align: center;
+  font-weight: 200;
+  font-size: 25px;
+}
+header .HeaderRight {
+  width: 75%;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .HeaderRight .HeaderRightList {
+  height: 125px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  padding-left: 10%;
+  padding-right: 20px;
+}
+header .HeaderRight .HeaderRightList a {
+  font-size: 20px;
+  font-style: italic;
+  transition: 0.5s;
+}
+header .HeaderRight .HeaderRightList a:hover {
+  color: gray;
+}
+header .HeaderRight #check {
+  display: none;
+}
+header .HeaderRight .Burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 990;
+  right: 30px;
+  top: 55px;
+  transition: 1s;
+}
+header .HeaderRight .Burger .LineB {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+header .HeaderRight .Burger .LineB .Line3 {
+  transition: 0.5s;
+}
+header .HeaderRight .HeaderRightList2 {
+  display: none;
+  background-color: #ffffff !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .HeaderRight .HeaderRightList2 ul {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding-left: 30px;
+  padding-bottom: 110px;
+  font-style: italic;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    margin-top: 0px;
+  }
+  header {
+    position: relative;
+  }
+  header .HeaderLeft {
+    width: 75%;
+    padding-left: 40px;
+    justify-content: start;
+  }
+  header .HeaderLeft .Title {
+    width: 80px;
+    height: 60px;
+  }
+  header .HeaderLeft .Title a {
+    font-size: 16px;
+  }
+  header .HeaderRight {
+    width: 25%;
+    padding-right: 30px;
+  }
+  header .HeaderRight .HeaderRightList {
+    display: none;
+  }
+  header .HeaderRight .Burger {
+    position: absolute;
+    display: flex;
+  }
+  header .HeaderRight .HeaderRightList2 {
+    display: none;
+    width: 90%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+  header .HeaderRight #check {
+    display: none;
+  }
+  header .HeaderRight #check:checked ~ .HeaderRightList2 {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .HeaderRight #check:checked ~ label .Burger .LineB {
+    transform: rotate(45deg) translate(5px);
+    transition: 0.5s;
+  }
+  header .HeaderRight #check:checked ~ label .Burger .Line2 {
+    transform: rotate(-45deg) translate(5px);
+    transition: 0.5s;
+  }
+  header .HeaderRight #check:checked ~ label .Burger .Line3 {
+    display: none;
+    transition: 0.5s;
   }
 }/*# sourceMappingURL=portfolio2.css.map */

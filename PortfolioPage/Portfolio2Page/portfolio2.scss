@@ -6,8 +6,10 @@
   list-style: none !important;
   color: black !important;
 }
+
 body {
   font-family: none;
+  scroll-behavior: smooth;
   line-height: 1.2;
 }
 ul {
@@ -15,188 +17,6 @@ ul {
 }
 p {
   margin-bottom: 0;
-}
-header {
-  //   margin-top: 72px;
-  width: 100% !important;
-  // height: 125px;
-  background-color: #ffffff !important;
-  display: flex !important;
-  position: fixed !important;
-  z-index: 200 !important;
-  top: 0 !important;
-
-  .HeaderLeft {
-    width: 25%;
-    height: 125px;
-    // background-color: yellowgreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 30px;
-
-    .Title {
-      width: 120px;
-      height: 90px;
-      border: solid 1px black !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 5px;
-      a {
-        font-family: raleway !important;
-        text-align: center;
-        font-weight: 200;
-        font-size: 25px;
-      }
-    }
-  }
-  .HeaderRight {
-    width: 75%;
-    height: 125px;
-    // background-color: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .HeaderRightList {
-      height: 125px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      //   gap: 70px;
-      gap: 10%;
-      padding-left: 10%;
-      padding-right: 20px;
-      a {
-        font-size: 20px;
-        font-style: italic;
-        transition: 0.5s;
-        &:hover {
-          color: gray;
-        }
-      }
-    }
-    #check {
-      display: none;
-    }
-    .Burger {
-      display: none;
-      flex-direction: column;
-      gap: 4px;
-      cursor: pointer;
-      position: fixed;
-      z-index: 990;
-      right: 30px;
-      top: 55px;
-      transition: 1s;
-
-      .LineB {
-        width: 30px;
-        height: 3px;
-        background-color: black;
-        border-radius: 5px;
-        transition: 0.5s;
-        .Line3 {
-          transition: 0.5s;
-        }
-      }
-    }
-    .HeaderRightList2 {
-      display: none;
-
-      background-color: #ffffff !important;
-
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      ul {
-        height: 100vh;
-
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        // align-items: center;
-        justify-content: center;
-        gap: 40px;
-        padding-left: 30px;
-        padding-bottom: 110px;
-        font-style: italic;
-        overflow: scroll;
-      }
-    }
-  }
-}
-@media screen and (max-width: 700px) {
-  header {
-    position: relative;
-    .HeaderLeft {
-      width: 75%;
-      padding-left: 40px;
-      justify-content: start;
-      .Title {
-        width: 80px;
-        height: 60px;
-        a {
-          font-size: 16px;
-        }
-      }
-    }
-    .HeaderRight {
-      width: 25%;
-      padding-right: 30px;
-      .HeaderRightList {
-        display: none;
-      }
-
-      .Burger {
-        position: absolute;
-        display: flex;
-      }
-
-      .HeaderRightList2 {
-        display: none;
-        width: 90%;
-        height: 100vh;
-        position: fixed;
-        right: 0;
-        top: 0;
-      }
-      #check {
-        display: none;
-
-        &:checked {
-          ~ .HeaderRightList2 {
-            display: flex;
-            height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          }
-
-          ~ label {
-            .Burger {
-              .LineB {
-                transform: rotate(45deg) translate(5px);
-                transition: 0.5s;
-              }
-              .Line2 {
-                transform: rotate(-45deg) translate(5px);
-                transition: 0.5s;
-              }
-              .Line3 {
-                display: none;
-                transition: 0.5s;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 footer {
@@ -336,7 +156,7 @@ footer {
         height: 50px;
         background-color: #202a32;
         font-size: 30px;
-        color: white;
+        color: white !important;
         border-radius: 50%;
       }
     }
@@ -366,7 +186,9 @@ main {
   align-items: center;
   justify-content: center;
   margin-top: 130px;
-
+  .afterCarousel {
+    display: none;
+  }
   .top {
     width: 860px;
     padding: 0 20px;
@@ -421,18 +243,254 @@ main {
 @media screen and (max-width: 900px) {
   main {
     .mycarousel {
-        width: 700px;
+      width: 700px;
       img {
         height: 380px !important;
       }
     }
-    .top{
-        width: 750px;
+    .top {
+      width: 750px;
     }
- 
-.nextp{
-    width: 700px;
-}
 
+    .nextp {
+      width: 700px;
+    }
+  }
 }
+@media screen and (max-width: 800px) {
+  main {
+    .mycarousel {
+      display: none;
+      width: 700px;
+      img {
+        height: 380px !important;
+      }
+    }
+
+    .afterCarousel {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      img {
+        width: 90%;
+      }
+    }
+
+    .top {
+      width: 90%;
+      padding: 0 0px;
+      .bp {
+        font-size: 40px;
+        width: 200px;
+      }
+      .Middle1 {
+        width: 90%;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .Middle2 {
+        width: 100%;
+        padding-bottom: 20px;
+        .P4 {
+          width: 100%;
+        }
+        .P5 {
+          width: 100%;
+        }
+      }
+    }
+    .nextp {
+      width: 100%;
+      padding-right: 40px;
+    }
+  }
+}
+header {
+  //   margin-top: 72px;
+  width: 100% !important;
+  // height: 125px;
+  background-color: #ffffff !important;
+  display: flex;
+  position: fixed;
+  z-index: 200 !important;
+  top: 0 !important;
+
+  .HeaderLeft {
+    width: 25%;
+    height: 125px;
+    // background-color: yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 30px;
+
+    .Title {
+      width: 120px;
+      height: 90px;
+      border: solid 1px black !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5px;
+      a {
+        font-family: raleway !important;
+        text-align: center;
+        font-weight: 200;
+        font-size: 25px;
+      }
+    }
+  }
+  .HeaderRight {
+    width: 75%;
+    height: 125px;
+    // background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .HeaderRightList {
+      height: 125px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      //   gap: 70px;
+      gap: 10%;
+      padding-left: 10%;
+      padding-right: 20px;
+      a {
+        font-size: 20px;
+        font-style: italic;
+        transition: 0.5s;
+        &:hover {
+          color: gray;
+        }
+      }
+    }
+    #check {
+      display: none;
+    }
+    .Burger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      position: fixed;
+      z-index: 990;
+      right: 30px;
+      top: 55px;
+      transition: 1s;
+
+      .LineB {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        border-radius: 5px;
+        transition: 0.5s;
+        .Line3 {
+          transition: 0.5s;
+        }
+      }
+    }
+    .HeaderRightList2 {
+      display: none;
+
+      background-color: #ffffff !important;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      ul {
+        height: 100vh;
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding-left: 30px;
+        padding-bottom: 110px;
+        font-style: italic;
+        overflow: scroll;
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  main {
+    margin-top: 0px;
+  }
+
+  header {
+    position: relative;
+    .HeaderLeft {
+      width: 75%;
+      padding-left: 40px;
+      justify-content: start;
+      .Title {
+        width: 80px;
+        height: 60px;
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+    .HeaderRight {
+      width: 25%;
+      padding-right: 30px;
+      .HeaderRightList {
+        display: none;
+      }
+
+      .Burger {
+        position: absolute;
+        display: flex;
+      }
+
+      .HeaderRightList2 {
+        display: none;
+        width: 90%;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+      #check {
+        display: none;
+
+        &:checked {
+          ~ .HeaderRightList2 {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+
+          ~ label {
+            .Burger {
+              .LineB {
+                transform: rotate(45deg) translate(5px);
+                transition: 0.5s;
+              }
+              .Line2 {
+                transform: rotate(-45deg) translate(5px);
+                transition: 0.5s;
+              }
+              .Line3 {
+                display: none;
+                transition: 0.5s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
