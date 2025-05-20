@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+main {
+  background-color: aqua;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+main .parent {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  border: solid gray 1px;
+}
+main .parent .top {
+  width: 940px;
+  height: 410px;
+  background-image: url(./images/1d110d25a08446189f683b39b2cea1d5.avif);
+  background-size: cover;
+  background-position: center;
+}
+main .parent .bottom {
+  width: 940px;
+  height: 310px;
+  background-color: white;
+  padding: 20px;
+}/*# sourceMappingURL=style4.css.map */

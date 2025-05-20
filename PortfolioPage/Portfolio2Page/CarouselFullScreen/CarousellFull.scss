@@ -14,3 +14,25 @@ main {
     width: 50%;
   }
 }
+
+
+  .checkBox {
+    background-color: yellowgreen;
+    &:hover {
+      background-color: aqua;
+    }
+  }
+
+  #check {
+    display: none;
+    &:checked {
+      display: inline;
+
+      ~ main {
+        .mycarousel {
+          width: 80% ;
+        }
+      }
+    }
+  }
+

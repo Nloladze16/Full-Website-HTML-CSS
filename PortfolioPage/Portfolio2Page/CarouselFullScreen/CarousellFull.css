@@ -13,4 +13,21 @@ main {
 }
 main .mycarousel {
   width: 50%;
+}
+
+.checkBox {
+  background-color: yellowgreen;
+}
+.checkBox:hover {
+  background-color: aqua;
+}
+
+#check {
+  display: none;
+}
+#check:checked {
+  display: inline;
+}
+#check:checked ~ main .mycarousel {
+  width: 80%;
 }/*# sourceMappingURL=CarousellFull.css.map */
