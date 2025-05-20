@@ -121,7 +121,7 @@ header .HeaderRight .HeaderRightList2 ul {
   }
   header .HeaderLeft {
     width: 75%;
-    padding-left: 40px;
+    padding-left: 5%;
     justify-content: start;
   }
   header .HeaderLeft .Title {
