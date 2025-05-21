@@ -2,16 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: black;
   text-decoration: none;
   list-style: none;
+  color: black;
 }
-html {
-  scroll-behavior: smooth;
-}
-.active {
-  color: gray;
-}
+
 header {
   //   margin-top: 72px;
   width: 100%;
@@ -127,14 +122,11 @@ header {
   }
 }
 @media screen and (max-width: 700px) {
-  main {
-    margin-top: 0;
-  }
   header {
     position: relative;
     .HeaderLeft {
       width: 75%;
-      padding-left: 40px;
+      padding-left: 5%;
       justify-content: start;
       .Title {
         width: 80px;
@@ -200,217 +192,245 @@ header {
 
 main {
   margin-top: 125px;
-
   width: 100%;
+  // height: 200vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding-bottom: 30px;
-  .search {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 60%;
-    padding: 10px 5px;
-    p {
-      font-family: josefin sans;
-      font-weight: 200;
-    }
-    #news {
-      display: none;
-    }
-  }
-
-  .parent {
+  justify-content: center;
+  font-family: josefin sans;
+  font-weight: 200;
+  padding-bottom: 20px;
+  .mainparent {
+    width: 62%;
+    // height: 200vh
     display: flex;
     flex-direction: column;
+    gap: 30px;
+    padding: 30px 70px;
     border: solid gray 1px;
-    width: 60%;
 
+    .admin {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .adminparent {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        i {
+          font-size: 22px;
+        }
+        .adminleft {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+    .maintitle {
+      font-size: 42px;
+      font-weight: 300;
+    }
+    #aftertitle {
+      font-size: 20px;
+      font-weight: 400;
+    }
     img {
       width: 100%;
     }
-    .bottom {
-      // width: 940px;
-      width: 100%;
-      height: 310px;
-      background-color: white;
-      padding: 20px 50px;
+
+    .p1 {
+      font-size: 20px;
+    }
+    .p2parent {
+      :nth-child(1) {
+        font-size: 20px;
+        font-weight: 400;
+      }
+      :nth-child(2) {
+        font-size: 20px;
+      }
+    }
+    .p3parent {
+      :nth-child(1) {
+        font-size: 20px;
+        font-weight: 400;
+      }
+      :nth-child(2) {
+        font-size: 20px;
+      }
+    }
+    .p4parent {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      .admin {
-        width: 100%;
+      #stun {
+        font-size: 20px;
+        font-weight: 400;
+      }
+      .lineparent {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .line {
+          width: 3px;
+          height: 40px;
+          background-color: black;
+        }
+        #be {
+          font-size: 24px;
+          font-style: italic;
+        }
+      }
+      #text {
+        font-size: 20px;
+      }
+    }
+    .p5parent {
+      :nth-child(1) {
+        font-size: 20px;
+        font-weight: 400;
+      }
+      :nth-child(2) {
+        font-size: 20px;
+      }
+    }
+    .mainline2 {
+      width: 100%;
+      height: 1px;
+      background-color: gray;
+    }
+    .socials {
+      display: flex;
+      gap: 30px;
+    }
+    .mainline3 {
+      width: 100%;
+      height: 1px;
+      background-color: gray;
+    }
+    .coments {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .comentsparent {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        .adminParent {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          gap: 10px;
-          .icon {
-            font-size: 22px;
-          }
-
-          .ParentP {
-            font-family: josefin sans;
-            font-weight: 200;
-            #admin1 {
-              width: 100%;
-            }
-            .date {
-            }
-          }
-        }
-      }
-      .title {
-        width: 100%;
-        font-family: raleway;
-        font-weight: 200;
-        a {
-          font-size: 30px;
-        }
-      }
-      .text {
-        width: 100%;
-        padding-bottom: 40px;
+        gap: 10px;
         font-family: josefin sans;
         font-weight: 200;
-        p {
-          word-spacing: 2px;
+        .secondcomment {
+          display: none;
         }
       }
-      .line {
-        background-color: gray;
-        width: 100%;
-        height: 1px;
-      }
-      .comments {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        .comentsparent {
-          display: flex;
-          flex-direction: row;
-          gap: 10px;
-          font-family: josefin sans;
-          font-weight: 200;
-          .secondcomment {
-            display: none;
-          }
-        }
-        .heart {
-          color: red;
-        }
+      .heart {
+        color: red;
       }
     }
   }
 }
+
 @media screen and (max-width: 900px) {
   main {
-    .parent {
-      .bottom {
-        height: auto;
-        .admin {
-          .adminParent {
-            .icon {
-              font-size: 16px;
-            }
-            #admin1 {
-              font-size: 13px;
-            }
-            .date {
-              font-size: 13px;
-            }
-          }
-        }
-        .title {
-          a {
-            font-size: 20px;
-          }
-        }
-        .text {
-          padding-bottom: 10px;
+    .mainparent {
+      padding: 30px 20px;
+      .maintitle {
+        font-size: 30px;
+      }
+      .admin {
+        .adminparent {
+          display: flex;
         }
       }
     }
   }
 }
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 600px) {
   main {
-    margin-top: 0;
-    gap: 0;
-    .search {
-      width: 100%;
-      padding: 20px 5px;
-      background-color: #2f2e2e;
-      p {
-        color: white;
-      }
-      i {
-        color: white;
-      }
-      #allpost {
-        display: none;
-      }
-      #news {
-        display: flex;
-      }
-    }
-    .parent {
+    .mainparent {
       width: 100%;
       border: none;
-      .bottom {
-        height: auto;
-        padding: 20px;
-        .admin {
-          order: -9;
-          .adminParent {
-            .icon {
-              font-size: 16px;
-            }
-            #admin1 {
-              font-size: 13px;
-            }
-            .date {
-              font-size: 13px;
-            }
+      .admin {
+        .adminparent {
+          .adminleft {
+            flex-direction: column;
+            align-items: start;
+            gap: 5px;
           }
         }
-        .title {
-          order: -6;
-          a {
-            font-size: 30px;
+      }
+
+      .coments {
+        .comentsparent {
+          gap: 30px;
+          .firstcomment {
+            display: none;
           }
-        }
-        .text {
-          order: -3;
-        }
-        .line {
-          order: 9;
-        }
-        .comments {
-          order: 3;
-          .comentsparent {
-            gap: 20px;
-            .firstcomment {
-              display: none;
-            }
-            .secondcomment {
-              display: flex;
-              font-family: josefin sans;
-              font-weight: 200;
-              gap: 5px;
-            }
+          .secondcomment {
+            display: flex;
+            gap: 10px;
           }
         }
       }
     }
   }
 }
+
+//main ends here/////////////////////////////
+
+//section starts here///////////////////////
+.firstsection {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  .sectiontop {
+    width: 62%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .sectionbottom {
+    width: 62%;
+    display: flex;
+    gap: 2%;
+
+    .bottomleft {
+      display: flex;
+      flex-direction: column;
+      border: gray solid 1px;
+      width: 32%;
+      .bottom{
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .sectiontitle {
+      }
+      .sectionline {
+        width: 100%;
+        height: 1px;
+        background-color: gray;
+      }
+    }
+    .bottommiddle {
+      display: flex;
+      flex-direction: column;
+      border: gray solid 1px;
+      width: 32%;
+    }
+    .bottomright {
+      display: flex;
+      flex-direction: column;
+      border: gray solid 1px;
+      width: 32%;
+    }
+  }
+}
+
+//sectionendhere///////////////////////////////////
 
 footer {
   width: 100%;
@@ -533,6 +553,10 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+  main {
+    margin-top: 0;
+  }
+
   footer {
     .arrowup {
       position: fixed;

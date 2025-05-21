@@ -2,17 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: black;
   text-decoration: none;
   list-style: none;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.active {
-  color: gray;
+  color: black;
 }
 
 header {
@@ -116,15 +108,12 @@ header .HeaderRight .HeaderRightList2 ul {
 }
 
 @media screen and (max-width: 700px) {
-  main {
-    margin-top: 0;
-  }
   header {
     position: relative;
   }
   header .HeaderLeft {
     width: 75%;
-    padding-left: 40px;
+    padding-left: 5%;
     justify-content: start;
   }
   header .HeaderLeft .Title {
@@ -180,197 +169,210 @@ main {
   margin-top: 125px;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding-bottom: 30px;
-}
-main .search {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 60%;
-  padding: 10px 5px;
-}
-main .search p {
+  justify-content: center;
   font-family: josefin sans;
   font-weight: 200;
+  padding-bottom: 20px;
 }
-main .search #news {
-  display: none;
-}
-main .parent {
+main .mainparent {
+  width: 62%;
   display: flex;
   flex-direction: column;
+  gap: 30px;
+  padding: 30px 70px;
   border: solid gray 1px;
-  width: 60%;
 }
-main .parent img {
-  width: 100%;
-}
-main .parent .bottom {
-  width: 100%;
-  height: 310px;
-  background-color: white;
-  padding: 20px 50px;
+main .mainparent .admin {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-main .parent .bottom .admin {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-main .parent .bottom .admin .adminParent {
+main .mainparent .admin .adminparent {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   gap: 10px;
+  align-items: center;
 }
-main .parent .bottom .admin .adminParent .icon {
+main .mainparent .admin .adminparent i {
   font-size: 22px;
 }
-main .parent .bottom .admin .adminParent .ParentP {
-  font-family: josefin sans;
-  font-weight: 200;
+main .mainparent .admin .adminparent .adminleft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-main .parent .bottom .admin .adminParent .ParentP #admin1 {
+main .mainparent .maintitle {
+  font-size: 42px;
+  font-weight: 300;
+}
+main .mainparent #aftertitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+main .mainparent img {
   width: 100%;
 }
-main .parent .bottom .title {
-  width: 100%;
-  font-family: raleway;
-  font-weight: 200;
+main .mainparent .p1 {
+  font-size: 20px;
 }
-main .parent .bottom .title a {
-  font-size: 30px;
+main .mainparent .p2parent :nth-child(1) {
+  font-size: 20px;
+  font-weight: 400;
 }
-main .parent .bottom .text {
-  width: 100%;
-  padding-bottom: 40px;
-  font-family: josefin sans;
-  font-weight: 200;
+main .mainparent .p2parent :nth-child(2) {
+  font-size: 20px;
 }
-main .parent .bottom .text p {
-  word-spacing: 2px;
+main .mainparent .p3parent :nth-child(1) {
+  font-size: 20px;
+  font-weight: 400;
 }
-main .parent .bottom .line {
-  background-color: gray;
+main .mainparent .p3parent :nth-child(2) {
+  font-size: 20px;
+}
+main .mainparent .p4parent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .mainparent .p4parent #stun {
+  font-size: 20px;
+  font-weight: 400;
+}
+main .mainparent .p4parent .lineparent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main .mainparent .p4parent .lineparent .line {
+  width: 3px;
+  height: 40px;
+  background-color: black;
+}
+main .mainparent .p4parent .lineparent #be {
+  font-size: 24px;
+  font-style: italic;
+}
+main .mainparent .p4parent #text {
+  font-size: 20px;
+}
+main .mainparent .p5parent :nth-child(1) {
+  font-size: 20px;
+  font-weight: 400;
+}
+main .mainparent .p5parent :nth-child(2) {
+  font-size: 20px;
+}
+main .mainparent .mainline2 {
   width: 100%;
   height: 1px;
+  background-color: gray;
 }
-main .parent .bottom .comments {
+main .mainparent .socials {
+  display: flex;
+  gap: 30px;
+}
+main .mainparent .mainline3 {
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
+main .mainparent .coments {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-main .parent .bottom .comments .comentsparent {
+main .mainparent .coments .comentsparent {
   display: flex;
   flex-direction: row;
   gap: 10px;
   font-family: josefin sans;
   font-weight: 200;
 }
-main .parent .bottom .comments .comentsparent .secondcomment {
+main .mainparent .coments .comentsparent .secondcomment {
   display: none;
 }
-main .parent .bottom .comments .heart {
+main .mainparent .coments .heart {
   color: red;
 }
 
 @media screen and (max-width: 900px) {
-  main .parent .bottom {
-    height: auto;
+  main .mainparent {
+    padding: 30px 20px;
   }
-  main .parent .bottom .admin .adminParent .icon {
-    font-size: 16px;
+  main .mainparent .maintitle {
+    font-size: 30px;
   }
-  main .parent .bottom .admin .adminParent #admin1 {
-    font-size: 13px;
-  }
-  main .parent .bottom .admin .adminParent .date {
-    font-size: 13px;
-  }
-  main .parent .bottom .title a {
-    font-size: 20px;
-  }
-  main .parent .bottom .text {
-    padding-bottom: 10px;
-  }
-}
-@media screen and (max-width: 700px) {
-  main {
-    margin-top: 0;
-    gap: 0;
-  }
-  main .search {
-    width: 100%;
-    padding: 20px 5px;
-    background-color: #2f2e2e;
-  }
-  main .search p {
-    color: white;
-  }
-  main .search i {
-    color: white;
-  }
-  main .search #allpost {
-    display: none;
-  }
-  main .search #news {
+  main .mainparent .admin .adminparent {
     display: flex;
   }
-  main .parent {
+}
+@media screen and (max-width: 600px) {
+  main .mainparent {
     width: 100%;
     border: none;
   }
-  main .parent .bottom {
-    height: auto;
-    padding: 20px;
-  }
-  main .parent .bottom .admin {
-    order: -9;
-  }
-  main .parent .bottom .admin .adminParent .icon {
-    font-size: 16px;
-  }
-  main .parent .bottom .admin .adminParent #admin1 {
-    font-size: 13px;
-  }
-  main .parent .bottom .admin .adminParent .date {
-    font-size: 13px;
-  }
-  main .parent .bottom .title {
-    order: -6;
-  }
-  main .parent .bottom .title a {
-    font-size: 30px;
-  }
-  main .parent .bottom .text {
-    order: -3;
-  }
-  main .parent .bottom .line {
-    order: 9;
-  }
-  main .parent .bottom .comments {
-    order: 3;
-  }
-  main .parent .bottom .comments .comentsparent {
-    gap: 20px;
-  }
-  main .parent .bottom .comments .comentsparent .firstcomment {
-    display: none;
-  }
-  main .parent .bottom .comments .comentsparent .secondcomment {
-    display: flex;
-    font-family: josefin sans;
-    font-weight: 200;
+  main .mainparent .admin .adminparent .adminleft {
+    flex-direction: column;
+    align-items: start;
     gap: 5px;
   }
+  main .mainparent .coments .comentsparent {
+    gap: 30px;
+  }
+  main .mainparent .coments .comentsparent .firstcomment {
+    display: none;
+  }
+  main .mainparent .coments .comentsparent .secondcomment {
+    display: flex;
+    gap: 10px;
+  }
 }
+.firstsection {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.firstsection .sectiontop {
+  width: 62%;
+  display: flex;
+  justify-content: space-between;
+}
+.firstsection .sectionbottom {
+  width: 62%;
+  display: flex;
+  gap: 2%;
+}
+.firstsection .sectionbottom .bottomleft {
+  display: flex;
+  flex-direction: column;
+  border: gray solid 1px;
+  width: 32%;
+}
+.firstsection .sectionbottom .bottomleft .bottom {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.firstsection .sectionbottom .bottomleft .sectionline {
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
+.firstsection .sectionbottom .bottommiddle {
+  display: flex;
+  flex-direction: column;
+  border: gray solid 1px;
+  width: 32%;
+}
+.firstsection .sectionbottom .bottomright {
+  display: flex;
+  flex-direction: column;
+  border: gray solid 1px;
+  width: 32%;
+}
+
 footer {
   width: 100%;
   background-color: #2f2e2e;
@@ -485,6 +487,9 @@ footer .arrowup i {
   }
 }
 @media screen and (max-width: 700px) {
+  main {
+    margin-top: 0;
+  }
   footer .arrowup {
     position: fixed;
     right: 15px;
@@ -518,4 +523,4 @@ footer .arrowup i {
     justify-content: start;
     padding-left: 20px;
   }
-}/*# sourceMappingURL=style4.css.map */
+}/*# sourceMappingURL=news2.css.map */
