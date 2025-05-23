@@ -288,7 +288,7 @@ header {
     position: relative;
     .HeaderLeft {
       width: 75%;
-      padding-left: 40px;
+      padding-left: 8%;
       justify-content: start;
       .Title {
         width: 80px;
@@ -322,6 +322,11 @@ header {
         display: none;
 
         &:checked {
+          ~ label {
+            .Burger {
+              position: fixed;
+            }
+          }
           ~ .HeaderRightList2 {
             display: flex;
             height: 100vh;

@@ -153,6 +153,9 @@ header .HeaderRight .HeaderRightList2 ul {
   header .HeaderRight #check {
     display: none;
   }
+  header .HeaderRight #check:checked ~ label .Burger {
+    position: fixed;
+  }
   header .HeaderRight #check:checked ~ .HeaderRightList2 {
     display: flex;
     height: 100vh;
@@ -499,10 +502,11 @@ main .MainParent .MainChild .ThirdImage {
 }
 .NewsSection .NewsSectionChild .NewsChild :nth-child(1) {
   font-size: 60px;
+  font-style: italic;
 }
 .NewsSection .NewsSectionChild .NewsChild :nth-child(2) {
   font-size: 18px;
-  word-spacing: 15px;
+  word-spacing: 20px;
 }
 .NewsSection .NewsSectionChild .NewsChild :nth-child(3) {
   font-size: 26px;

@@ -11,7 +11,7 @@ main {
   align-items: center;
   flex-direction: column;
 }
-main .mycarousel {
+main img {
   width: 50%;
 }
 
@@ -42,8 +42,8 @@ main .mycarousel {
 #check:checked ~ label .exit {
   display: flex;
 }
-#check:checked ~ main .mycarousel {
-  width: 70%;
+#check:checked ~ main img {
+  width: 65%;
 }
 
 body a {
@@ -55,4 +55,13 @@ body a {
 }
 body a:hover {
   color: gray;
-}/*# sourceMappingURL=CarousellFull.css.map */
+}
+
+@media screen and (max-width: 600px) {
+  .checkBox {
+    display: none;
+  }
+  main img {
+    width: 100%;
+  }
+}/*# sourceMappingURL=newscarousell.css.map */

@@ -132,7 +132,7 @@ header {
     position: relative;
     .HeaderLeft {
       width: 75%;
-      padding-left: 40px;
+      padding-left: 5%;
       justify-content: start;
       .Title {
         width: 80px;
@@ -166,6 +166,11 @@ header {
         display: none;
 
         &:checked {
+          ~ label {
+            .Burger {
+              position: fixed;
+            }
+          }
           ~ .HeaderRightList2 {
             display: flex;
             height: 100vh;
@@ -286,7 +291,7 @@ main {
     }
     .parent {
       width: 650px;
-      .child{
+      .child {
         height: 380px;
       }
     }
@@ -304,16 +309,15 @@ main {
     .parent {
       width: 320px;
       padding: 20px 0px;
-      .child{
+      .child {
         height: 300px;
-        p{
+        p {
           display: none;
         }
       }
     }
   }
 }
-
 
 footer {
   width: 100%;

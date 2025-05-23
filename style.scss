@@ -167,6 +167,11 @@ header {
         display: none;
 
         &:checked {
+          ~ label {
+             .Burger {
+              position: fixed;
+            }
+          }
           ~ .HeaderRightList2 {
             display: flex;
             height: 100vh;
@@ -581,10 +586,11 @@ main {
       gap: 15px;
       :nth-child(1) {
         font-size: 60px;
+        font-style: italic;
       }
       :nth-child(2) {
         font-size: 18px;
-        word-spacing: 15px;
+        word-spacing: 20px;
       }
       :nth-child(3) {
         font-size: 26px;

@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 15px 10px;
+}
+header a i {
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+header a i:hover {
+  color: gray;
+}
+
+main img {
+  width: 100%;
+}/*# sourceMappingURL=photo2.css.map */

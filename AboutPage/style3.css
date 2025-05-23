@@ -121,7 +121,7 @@ header .HeaderRight .HeaderRightList2 ul {
   }
   header .HeaderLeft {
     width: 75%;
-    padding-left: 40px;
+    padding-left: 5%;
     justify-content: start;
   }
   header .HeaderLeft .Title {
@@ -152,6 +152,9 @@ header .HeaderRight .HeaderRightList2 ul {
   }
   header .HeaderRight #check {
     display: none;
+  }
+  header .HeaderRight #check:checked ~ label .Burger {
+    position: fixed;
   }
   header .HeaderRight #check:checked ~ .HeaderRightList2 {
     display: flex;

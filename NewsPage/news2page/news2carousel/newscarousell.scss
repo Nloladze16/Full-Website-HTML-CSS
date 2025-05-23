@@ -11,7 +11,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  .mycarousel {
+  img {
     width: 50%;
   }
 }
@@ -50,13 +50,12 @@ main {
     }
 
     ~ main {
-      .mycarousel {
-        width: 70%;
+      img {
+        width: 65%;
       }
     }
   }
 }
-
 body {
   a {
     position: fixed;
@@ -67,6 +66,18 @@ body {
 
     &:hover {
       color: gray;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .checkBox {
+    display: none;
+  }
+
+  main{
+    img{
+        width: 100%;
     }
   }
 }
