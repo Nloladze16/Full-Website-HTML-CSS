@@ -168,7 +168,7 @@ header {
 
         &:checked {
           ~ label {
-             .Burger {
+            .Burger {
               position: fixed;
             }
           }
@@ -572,7 +572,7 @@ main {
   // align-items: center;
 
   .NewsSectionChild {
-    height: 800px;
+    height: 700px;
     width: 980px;
     display: grid;
     justify-content: center;
@@ -707,6 +707,54 @@ main {
   }
 }
 
+.recentnewsparent {
+  display: flex;
+  justify-content: center;
+  #recentnews {
+    padding-top: 100px;
+    font-family: josefin sans;
+    font-weight: 200;
+    font-size: 24px;
+    // padding-left: 145px;
+    width: 950px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .recentnewsparent {
+    #recentnews {
+      width: 100%;
+      padding-left: 20px;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .recentnewsparent {
+    #recentnews {
+      width: 36%;
+      padding-left: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .recentnewsparent {
+    #recentnews {
+      width: 40%;
+      padding-left: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .recentnewsparent {
+    #recentnews {
+      width: 100%;
+      padding-left: 15px;
+      padding-top: 30px;
+      font-size: 20px;
+    }
+  }
+}
 // NewsSection ends here///////////////////////////////////////////////////////////////////////////////////////////////////////
 // FooterStarts here//////////////////////////////////////////////////////////////////////////////////////////////
 
